@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwith</title>
+  <script src="https://cdn.tailwindcss.com"></script>  <!-- link de instalacion de tailwind CSS, forma de instalacion CDN -->
+</head>
+<body class="w-[auto] mx-10">
+  <h1 class="p-2 text-4xl font-bold underline">Probando tailwind</h1>
+  <article class="p-2 bg-lime-100 rounded-xl my-10">
+    <h2 class="text-2xl">
+      Colores   
+    </h2>
+    <p class="">BG color Sintaxis: (bg-lime-100) <br>
+      (bg) es el indicativo de que es background, es decir: color de fondo <br>
+      (lime) es el indicativo del color <br>
+      (100) es el indicativo de la tonalidad del color <br>
+      Para dar el color a los textos se maneja igual solo que se escribe de esta manera: (text-sky-900)
+      Para usar un color especifico se maneja de esta manera: text-[color en hexadecimal] , bg-[color en hexadecimal] <br>
+      Para usar colores especificos como black, red, yellow ... se hace de esta manera: (text-white) (bg-red)
+    </p>
+    <div class="py-2 bg-sky-900/50 p-2 rounded-md my-2 w-fit">
+      <b>
+        NOTA: el color debe ir de 100 en 100, al colocar un valor distinto no lo valida como color. Pero puedo usar 50 de valor el cual sera el color mas claro <br>
+      </b>
+    </div>
+    <div class="py-2 bg-sky-900/50 p-2 rounded-md w-fit">
+      <b>
+        NOTA: Para manejar colore se hace de la siguiente manera: "text-white" es decir text-color el color de la misma manera que con el background
+      </b>
+    </div>
+    <p class="">
+      Tambien se puede usar variables colocandolas en el archivo config.js de tailwind
+    </p>
+    <button class="bg-lime-200 hover:bg-lime-800 hover:text-white	 text-black p-2 w-[200px] block mx-auto border-solid border-2 border-lime-500 rounded-md hover:border-white">
+      Boton
+    </button>
+  </article>
+  <article class="ps-2 pb-[10px] rounded bg-red-200 rounded-xl mb-10">
+    <h2 class="text-2xl">
+      Padding
+    </h2>
+    <p>
+      El padding se usa de la siguiente manera: <br>
+      (p-2) cuando queremos darle el padding en todos los lados, arriba, abajo, izquierda y derecha <br>
+      (px-2) cuando queremos darle el padding en los lados, izquierda y derecha <br>
+      (py-2) cuando queremos darle el padding en los lados, arriba y abajo <br> 
+      (ps-2) cuando queremos darle el padding en el lado izquierdo <br>
+      (pe-2) cuando queremos darle el padding en el lado derecho <br> 
+      (pt-2) cuando queremos darle el padding en el lado arriba <br> 
+      (pr-2) cuando queremos darle el padding en el lado abajo <br> 
+      (pt-[10px]) cuando queremos usarlo personalizado o con una variable se hace de esa manera
+    </p>
+    <div class="py-2 bg-sky-900/50 p-2 rounded-md w-fit">
+      <b>
+        NOTA: Para manejar el hover en los colores se hace de la siguiente manera "hover:bg-lime-800"; de esa manera se trabaja el hover 
+      </b>
+    </div>
+  </article>
+  <article class="ps-2 pb-[10px] rounded bg-sky-200 rounded-xl h-full">
+    <h2 class="text-2xl">
+      Gradientes
+    </h2>
+    <section class="flex flex-wrap justify-center mt-2">
+      <div class="bg-gradient-to-r from-amber-800 ... mr-2 mb-2 p-2 rounded-md text-center w-96"> Gradiente 1 color</div>
+      <div class="bg-gradient-to-r from-red-500 to-blue-300 ... mr-2 mb-2 p-2 rounded-md text-center w-96"> Gradiente 2 colores</div>
+      <div class="bg-gradient-to-r from-green-500 to-blue-500 to-red-500  ... mr-2 mb-2 p-2 rounded-md text-center w-96"> Gradiente 3 colores</div>
+      <div class="bg-gradient-to-r from-green-500 to-blue-500 to-red-500 to-yellow-500 ... mr-2 mb-2 p-2 rounded-md text-center w-96"> Gradiente 4 colores</div>
+    </section>
+    
+    <section class="">
+      <div class="rounded-md bg-sky-900/50 w-fit my-2 p-2">
+        <b>
+          NOTA: Tener en cuenta que no se puede colocar etiquetas de texto en el mismo lugar que con un div; es decir: <br>
+          ESCRITO DEL CODIGO SIN LOS SIGNOS: <br>
+          <br> 
+          Forma erronea <br>
+          div /div <br>
+          p /p
+  
+          <br><br>
+          Forma correcta <br>
+          div <br>
+           p /p <br>
+          /div <br>
+          div /div
+        </b><br>
+      </div>
+      <div class="bg-sky-900/50 p-2 rounded-md my-2 w-fit">
+        <b>
+          NOTA: Para manejar los gradientes en tailwind, es de la siguiente manera "bg-gradient-to-r from-color_inicial to-color_final ..."
+        </b><br>
+      </div>
+      <div class="bg-sky-900/50 p-2 rounded-md my-2 w-fit">
+        <b>
+          NOTA: Para manejar la opacacidad es de la siguiente manera: bg-color/50
+        </b>
+      </div>
+      <div class="bg-sky-900/50 p-2 rounded-md my2 w-fit">
+        <b>
+          NOTA: Para hacer un texto con con gradiente es de la siguiente manera: <br>
+          "bg-clip-text text-transparent bg-gradient-to-r from-pink-200 to-violet-200"
+        </b> <br>
+      </div>
+      <div class="mt-2">
+        <span class="text-4xl font-bold uppercase bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-yellow-500">
+          TEXTO EJEMPLO
+        </span>
+      </div>
+    </section>
+  </article>
+  <article class="">
+    hola
+  </article>
+</body>
+</html>
