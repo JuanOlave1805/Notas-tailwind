@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tailwith</title>
   <script src="https://cdn.tailwindcss.com"></script>  <!-- link de instalacion de tailwind CSS, forma de instalacion CDN -->
+  <script src="tailwind.config.js"></script> 
 </head>
 <body class="w-[auto] mx-10">
   <h1 class="p-2 text-4xl font-bold underline">Probando tailwind</h1>
@@ -37,7 +38,7 @@
       Boton
     </button>
   </article>
-  <article class="ps-2 pb-[10px] rounded bg-red-200 rounded-xl mb-10">
+  <article class="ps-2 pb-[10px] bg-red-200 rounded-xl mb-10">
     <h2 class="text-2xl">
       Padding
     </h2>
@@ -58,15 +59,15 @@
       </b>
     </div>
   </article>
-  <article class="ps-2 pb-[10px] rounded bg-sky-200 rounded-xl h-full">
+  <article class="ps-2 pb-[10px]  bg-sky-200 rounded-xl h-full">
     <h2 class="text-2xl">
       Gradientes
     </h2>
     <section class="flex flex-wrap justify-center mt-2">
       <div class="bg-gradient-to-r from-amber-800 ... mr-2 mb-2 p-2 rounded-md text-center w-96"> Gradiente 1 color</div>
       <div class="bg-gradient-to-r from-red-500 to-blue-300 ... mr-2 mb-2 p-2 rounded-md text-center w-96"> Gradiente 2 colores</div>
-      <div class="bg-gradient-to-r from-green-500 to-blue-500 to-red-500  ... mr-2 mb-2 p-2 rounded-md text-center w-96"> Gradiente 3 colores</div>
-      <div class="bg-gradient-to-r from-green-500 to-blue-500 to-red-500 to-yellow-500 ... mr-2 mb-2 p-2 rounded-md text-center w-96"> Gradiente 4 colores</div>
+      <div class="bg-gradient-to-r from-green-500 via-blue-500 to-red-500  ... mr-2 mb-2 p-2 rounded-md text-center w-96"> Gradiente 3 colores</div>
+      <div class="bg-gradient-to-r from-green-500 from:30% via-blue-500 via:40%  to-yellow-500 to:30 ... mr-2 mb-2 p-2 rounded-md text-center w-96"> Gradiente 3 colores con porcentajes de espacio que tendran</div>
     </section>
     
     <section class="">
@@ -110,8 +111,36 @@
       </div>
     </section>
   </article>
-  <article class="">
-    hola
+  <article class="bg-sky-200 mt-10 rounded-md p-2 pt-0">
+    <section><h2 class="text-2xl "> Medidas</h2></section>
+    <section>
+      <p class="text-base bg-yellow-400/40 px-2 rounded-md w-fit">
+        Width personalizado: "w-[100px]" <br>
+        h-screen es para indicar q la altura es de toda la pantalla; Con h-full toma el 100% del contenedor padre
+
+      </p>
+    </section>
+  </article>
+  <article class="bg-Color_prueba mt-10 rounded-md p-2 pt-0 ">
+    <section><h2 class="xl:text-4xl md:text-3xl text-gray-100">Nota</h2></section>
+    <section>
+      <p class="text-base bg-red-400/80 px-2 rounded-md w-fit text-gray-100">
+        <b class="h-medida-120px">
+          Para manejar las variables globales en tailwind se colocan en el script donde se tenga la configuracion de tailwind en la etiqueta extend con la propiedad que se quiere, en el caso de medida seria en spacing con el nombre "medida-120"
+        </b>
+      </p>
+    </section>
+  </article>
+  <article class="bg-lime-200 mt-10 rounded-md p-2 pt-0 ">
+    <section><h2 class="text-2xl">Estados</h2></section>
+    <section class="">
+      <form action="" class="bg-red-200 rounded-md mx-auto w-96 block p-3">
+        <input type="text" placeholder="Nombre" class="" >
+        <input type="email" placeholder="Correo" class="">
+        <input type="password" placeholder="Contraseña" class="">
+        <input type="submit" value="Ingresar">
+      </form>
+    </section>
   </article>
 </body>
 </html>
